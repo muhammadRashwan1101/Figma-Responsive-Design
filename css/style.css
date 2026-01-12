@@ -7,14 +7,23 @@ body, html {
     margin: 0;
     padding: 0;
 }
+li:hover {
+    cursor: pointer;
+}
 
+button:hover {
+    cursor: pointer;
+}
 /* NAV BAR */
+main {
+    width: 90%;
+    margin: auto;
+}
 .nav-style {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 4%;
+    padding: 1% 0;
 }
 
 .menu {
@@ -26,10 +35,10 @@ body, html {
     display: none;
 }
 .nav-style ul {
-    width: 35%;
+    width: 30%;
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .logo-style{
@@ -44,10 +53,12 @@ body, html {
     align-items: center;
     justify-content: space-evenly;
 }
-
+.logo:hover {
+    cursor: pointer;
+}
 /* SECTION 1 */
 .container {
-    padding: 3% 0;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +66,7 @@ body, html {
 }
 
 .section-body {
-    padding: 2% 0; 
+    padding: 4% 0; 
     align-items: center;
     display: inherit;
     flex-direction: column;
@@ -66,7 +77,9 @@ body, html {
     font-weight: 600;
     margin-bottom: 0;
 }
-
+.section-body .main-header {
+    font-size: 5.4rem;
+}
 .section-body p {
     font-size: 1rem;
 }
@@ -91,19 +104,17 @@ body, html {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    column-gap: 4%;
+    /* column-gap: 4%; */
 }
 
 .img-container img {
-    width: 44%;
+    width: 48%
 }
 /* Section 2 */
 
 .section2 {
-    width: 95%;
-    margin: auto;
     display: flex;
     align-items: center;
     background-color: #f4f4f4;
@@ -152,31 +163,35 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4% 5%;
-    gap: 10%;
+    padding: 4% 0;
+    gap: 5%;
 }
 
 .section3 .section-img {
-    width: 45%;
+    width: 50%;
     flex-shrink: 0;
 }
 
+.section3 h2 {
+    font-size: 4rem;
+}
 .section3 .section-img img{
     display: block;
     width: 100%;
-    height: 100%;
-    max-height: 750px;
-    object-fit: fill;
+    max-height: 800px;
+    /* object-fit: fill; */
     border-radius: 24px;
 }
+.section3 p {
+    font-size: 1.2rem;
+}
 .section-header p {
-    max-width: 65ch;
+    max-width: 100ch;
 }
 .section3 .section-body {
-    width: 50%;
+    width: 90%;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
     margin: 0;
     text-align: start;
 }
@@ -192,10 +207,9 @@ body, html {
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 70ch;
+    /* max-width: 70ch; */
     line-height: 1.6;
 }
-
 .section3 .text-container p{
     margin-left: 4%;
 }
@@ -214,10 +228,10 @@ body, html {
 }
 
 .section5 {
-    margin: 7% 2%;
+    margin: 7% 0%;
     background-image: url(../assets/tyler-lastovich-AVzByhROPbs-unsplash\ 1.png);
     background-repeat: no-repeat;
-    background-size: 100% 85%;
+    background-size: 100% 80%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -273,7 +287,9 @@ footer {
     flex-wrap: wrap;
     padding: 4% 8%;
 }
-
+footer .nav-style {
+    padding: 1% 0;
+}
 footer .logo-style {
     color: white
 }
@@ -292,23 +308,24 @@ footer .logo-style {
     flex-shrink: 0;
 }
 .social-media ul{
+    padding: 0;
     width: 40%;
     list-style: none;
     display: flex;
-    align-items:baseline;
+    align-items:flex-start;
     justify-content: space-between;
 }
 
-.social-media ul img {
-    flex-shrink: 0;
-}
 
 
 
 /* MEDIA QUERY */
 @media (min-width: 768px) and (max-width: 1024px) {
+    .section-body .main-header {
+        font-size: 3.5rem;
+    }
     .nav-style ul {
-        width: 50%;
+        width: 40%;
         padding: 0;
     }
     .img-container {
@@ -361,23 +378,27 @@ footer .logo-style {
     .section3 .section-body{
         gap: 0rem;
     }
+    .section3 .section-body h2{
+        margin: 0;
+    }
     .section3 .sub-section{
         gap: 0rem;
     }
     .section3 .sub-section .text-container{
         max-width: 65ch;
-        align-items: flex-start;
+        align-items: center;
         text-align: start;
     }
     .section3 .section-img {
+        aspect-ratio: 2/4;
         display: block;
         width:45%;
     }
     .section3 .section-img img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        min-height: 700px;
     }
-
     /* Section 4 */
 
     .section2 .section4-img-container {
@@ -416,6 +437,9 @@ footer .logo-style {
 
 
 @media (min-width: 360px) and (max-width: 767px) {
+    .section-body .main-header {
+        font-size: 2.2em;
+    }
     .nav-style ul {
         width: 20%;
         padding: 0;
@@ -427,7 +451,7 @@ footer .logo-style {
         display: contents;
     }
     .img-container {
-        width: 80%;
+        width: 100%;
     }
     .img-container img {
         width: 100%;
@@ -439,10 +463,11 @@ footer .logo-style {
 
     }
     .section-body button {
-        padding: 2.5% 14%;
+        margin: 5% 0;
+        padding: 5% 16%;
     }
     .section-body h2 {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
     .section-body p {
         max-width: 40ch;
@@ -456,7 +481,7 @@ footer .logo-style {
         flex-direction: column;
     }
     .section3 .section-img {
-        width: 90%;
+        width:100%;
     }
     .section3 .section-header {
         display: flex;
@@ -478,8 +503,16 @@ footer .logo-style {
         background-size: 100% 50%;
 
     }
+
     .section5 .section-body {
         margin: 0;
+    }
+    .section5 .section-body  h2{
+        max-width: 15ch;
+        font-size: 1.5rem;
+    }
+    .section5 .section-body  p{
+        display: none;
     }
     .plants-container{
         width: 70%;
@@ -522,9 +555,9 @@ footer .logo-style {
         justify-content: space-between;
     }
     .social-media ul {
-        padding-left: 10%;
+        padding-left: 15%;
         width: 80%;
-        gap: 23%;
+        gap: 20%;
     }
     .social-media li {
         display: block;
