@@ -7,13 +7,14 @@ body, html {
     margin: 0;
     padding: 0;
 }
+
 /* NAV BAR */
-nav {
+.nav-style {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2% 4%;
+    padding: 1% 4%;
 }
 
 .menu {
@@ -24,14 +25,14 @@ nav {
 .hidden-menu {
     display: none;
 }
-nav ul {
+.nav-style ul {
     width: 35%;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
 }
 
-nav h1 {
+.logo-style{
     font-size: 1.4rem;
     font-weight: 600;
     color: #285E67;
@@ -54,7 +55,7 @@ nav h1 {
 }
 
 .section-body {
-    padding: 3% 0; 
+    padding: 2% 0; 
     align-items: center;
     display: inherit;
     flex-direction: column;
@@ -75,14 +76,15 @@ nav h1 {
     border: none;
     background-color: #285E67;
     color: white;
-    padding: 1.4% 5%;
+    padding: 1.4% 6%;
     margin-top: 2%;
     border-radius: 67px;
     -webkit-border-radius: 67px;
     -moz-border-radius: 67px;
     -ms-border-radius: 67px;
     -o-border-radius: 67px;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .img-container {
@@ -100,39 +102,43 @@ nav h1 {
 /* Section 2 */
 
 .section2 {
+    width: 95%;
+    margin: auto;
     display: flex;
     align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 12px;
 }
 
 .section2 .section-body  {
     width: 50%;
     align-items: flex-start;
     justify-content: space-around;
-    margin-left: 6%;
+    padding-left: 7%;
 }
 .section2 .section-body h2{
     font-size: 3.35rem;
     font-weight: 500;
     width: 100%;
+    text-align: start;
 }
 .sub-section {
     width: 100%;
     display: flex;
     margin-top: 5%;
-    justify-content: space-between;
-    /* column-gap: 15%; */
+    column-gap: 20%;
+    max-width: 75ch;
 }
 .text-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    width: 40%;
+    width: 30%;
     font-size: 0.9rem;
 }
 .section-img {
-    width: auto;
-    align-self: flex-end;
+    width: 45%;
 }
 
 .section-img img {
@@ -142,49 +148,166 @@ nav h1 {
 /* Section 3 */
 
 .section3 {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 5%;
+    gap: 10%;
 }
 
 .section3 .section-img {
-    width: 30%;
+    width: 45%;
+    flex-shrink: 0;
 }
 
+.section3 .section-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 750px;
+    object-fit: fill;
+    border-radius: 24px;
+}
 .section-header p {
     max-width: 65ch;
 }
 .section3 .section-body {
-    width: 60%;
+    width: 50%;
     flex-direction: column;
-    margin: 0;
     align-items: flex-start;
+    gap: 2rem;
+    margin: 0;
     text-align: start;
 }
 
 .section3 .sub-section {
-    width: 90%;
+    width: 100%;
     flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;    
 }
 .section3 .text-container {
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    column-gap: 2%;
+    max-width: 70ch;
+    line-height: 1.6;
 }
 
+.section3 .text-container p{
+    margin-left: 4%;
+}
 
+/* Section 4 */
 
+.section2 .section4-img-container {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 4% 0;
+}
+.section2 .section4-img-container img{
+    width: 50%;
+}
 
+.section5 {
+    margin: 7% 2%;
+    background-image: url(../assets/tyler-lastovich-AVzByhROPbs-unsplash\ 1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 85%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+}
 
+.section5 .section-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8% 0 5% 0;
+}
+.section5 button{
+    padding: 2% 10%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.section5 h2 {
+    font-size: 2.6rem;
+}
+.section5 .body-text p{
+    max-width: 65ch;
+}
 
+.plants-container {
+    padding: 6% 3%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #FCE2D7;
+}
 
+.plant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.plant h3 {
+    font-weight: 400;
+}
+
+footer {
+    background-color: #285E67;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 4% 8%;
+}
+
+footer .logo-style {
+    color: white
+}
+
+.social-media {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-media .logo {
+    width: 50%;
+}
+.links-list {
+    width: 70%;
+    flex-shrink: 0;
+}
+.social-media ul{
+    width: 40%;
+    list-style: none;
+    display: flex;
+    align-items:baseline;
+    justify-content: space-between;
+}
+
+.social-media ul img {
+    flex-shrink: 0;
+}
 
 
 
 /* MEDIA QUERY */
 @media (min-width: 768px) and (max-width: 1024px) {
-    nav ul {
+    .nav-style ul {
         width: 50%;
         padding: 0;
     }
@@ -220,6 +343,7 @@ nav h1 {
     }
     .section2 .section-body {
         width: 100%;
+        padding-left: 0;
     }
     .sub-section {
         justify-content: space-evenly;
@@ -229,10 +353,70 @@ nav h1 {
         text-align: center;
         width: 35%;
     }
+
+    /* Section 3 */
+    .section3{
+        gap: 2rem;
+    }
+    .section3 .section-body{
+        gap: 0rem;
+    }
+    .section3 .sub-section{
+        gap: 0rem;
+    }
+    .section3 .sub-section .text-container{
+        max-width: 65ch;
+        align-items: flex-start;
+        text-align: start;
+    }
+    .section3 .section-img {
+        display: block;
+        width:45%;
+    }
+    .section3 .section-img img {
+        object-fit: cover;
+        min-height: 700px;
+    }
+
+    /* Section 4 */
+
+    .section2 .section4-img-container {
+        display: none;
+    }
+    .section2 .section-body h2 {
+        text-align: center;
+    }
+    /* Section 5 */
+    .section5 {
+        background-size: 100% 80%;
+    }
+    .plant {
+        width: 50%;
+        padding: 3%;
+    }
+    .plant img{
+        width: 20%;
+    }
+    footer .nav-style {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .nav-style ul {
+        justify-content: flex-start;
+        padding: 0;
+        gap: 2rem;
+    }
+    .social-media ul {
+        gap: 1.5rem;
+        justify-content: space-between;
+    }
 }
 
+
+
 @media (min-width: 360px) and (max-width: 767px) {
-    nav ul {
+    .nav-style ul {
         width: 20%;
         padding: 0;
     }
@@ -255,7 +439,7 @@ nav h1 {
 
     }
     .section-body button {
-        padding: 3% 10%;
+        padding: 2.5% 14%;
     }
     .section-body h2 {
         font-size: 2.3rem;
@@ -266,5 +450,83 @@ nav h1 {
     }
     .section2 {
         display: none;
+    }
+
+    .section3 {
+        flex-direction: column;
+    }
+    .section3 .section-img {
+        width: 90%;
+    }
+    .section3 .section-header {
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+    }
+    .section3 .section-body {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .section3 .section-body .text-container p{
+        width: 100%;
+        max-width: 30ch;;
+    }
+
+    .section5 {
+        background-size: 100% 50%;
+
+    }
+    .section5 .section-body {
+        margin: 0;
+    }
+    .plants-container{
+        width: 70%;
+        /* padding: 10% 0; */
+    }
+    .plant {
+        width: 100%;
+        padding: 3%;
+    }
+    .plant img {
+        width: 20%;
+    }
+    footer {
+        align-items: center;
+        padding-bottom: 10%;
+    }
+    footer .nav-style {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .logo {
+        align-self: flex-start;
+    }
+    footer .links-list{
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    footer .links-list li {
+        display: inline-block;
+        width: 35%;
+        margin-bottom: 14%;
+    }
+
+    .social-media{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .social-media ul {
+        padding-left: 10%;
+        width: 80%;
+        gap: 23%;
+    }
+    .social-media li {
+        display: block;
     }
 }
